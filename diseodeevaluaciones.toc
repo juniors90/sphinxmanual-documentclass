@@ -1,0 +1,66 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{Acknowledgements}{\es@scroman {i}}{Doc-Start}%
+\contentsline {chapter}{List of Figures}{\es@scroman {iv}}{chapter*.1}%
+\contentsline {chapter}{List of Tables}{\es@scroman {v}}{chapter*.2}%
+\contentsline {chapter}{Preface}{\es@scroman {vii}}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Instalación}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Estructura Básica de un Documento}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Clase de Documento}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}La clase de documento de Diseño de Exámenes}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Controles generales del documento}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Reorganización de las preguntas}{8}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Generación de respuesta}{9}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Número de versiones diferentes}{9}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Nombre de la clase}{10}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Nombre del Examen}{10}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Datos del alumno}{10}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Fuente de la sección}{10}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}Comportamiento de Numeración}{10}{subsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.2.9}Imprimir sólo la respuesta}{10}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.10}DefineAnswerWrapper}{11}{subsection.4.2.10}%
+\contentsline {subsection}{\numberline {4.2.11}Número de Sección}{11}{subsection.4.2.11}%
+\contentsline {subsection}{\numberline {4.2.12}Fuente de Sección}{11}{subsection.4.2.12}%
+\contentsline {subsection}{\numberline {4.2.13}Resumen del Capítulo}{12}{subsection.4.2.13}%
+\contentsline {chapter}{\numberline {5}Entornos}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}fillin}{13}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Subrayado en entornos de espacios en blanco}{14}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Subrayado de espacios en blanco de longitud proporcional r}{14}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}shortanswer}{14}{section.5.2}%
+\contentsline {section}{\numberline {5.3}truefalse}{15}{section.5.3}%
+\contentsline {section}{\numberline {5.4}multiplechoice}{16}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Respuesta correcta en preguntas de opciones múltiples en negrita}{17}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Respuesta correcta en preguntas de opciones múltiles subrayando}{18}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}matching}{19}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Opciones de Entornos}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}title}{21}{section.6.1}%
+\contentsline {section}{\numberline {6.2}rearrange}{21}{section.6.2}%
+\contentsline {section}{\numberline {6.3}resetcounter}{21}{section.6.3}%
+\contentsline {section}{\numberline {6.4}keycolumns}{22}{section.6.4}%
+\contentsline {section}{\numberline {6.5}examcolumns}{22}{section.6.5}%
+\contentsline {section}{\numberline {6.6}suppressprefix}{22}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Manejo de Herramientas Especiales de Formato}{23}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Formateo especial de Entornos}{23}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}frontmatter}{23}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}endmatter}{23}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}examtop}{23}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}keytop}{25}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}exampreface}{25}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}keypreface}{25}{subsection.7.1.6}%
+\contentsline {subsection}{\numberline {7.1.7}examclosing}{26}{subsection.7.1.7}%
+\contentsline {subsection}{\numberline {7.1.8}keyclosing}{26}{subsection.7.1.8}%
+\contentsline {section}{\numberline {7.2}Formateo Especial de Macros}{26}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}exam}{26}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}key}{26}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}examvspace}{26}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}examvspace*}{27}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.5}examhspace}{27}{subsection.7.2.5}%
+\contentsline {subsection}{\numberline {7.2.6}examhspace*}{27}{subsection.7.2.6}%
+\contentsline {subsection}{\numberline {7.2.7}keyvspace}{27}{subsection.7.2.7}%
+\contentsline {subsection}{\numberline {7.2.8}keyvspace*}{27}{subsection.7.2.8}%
+\contentsline {subsection}{\numberline {7.2.9}keyhspace}{27}{subsection.7.2.9}%
+\contentsline {subsection}{\numberline {7.2.10}keyhspace*}{27}{subsection.7.2.10}%
+\contentsline {subsection}{\numberline {7.2.11}word}{28}{subsection.7.2.11}%
+\contentsline {chapter}{\numberline {8}Ejemplos Sencillos}{29}{chapter.8}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{31}{chapter*.6}%
+\contentsline {chapter}{Índice Alfabético}{33}{chapter*.7}%

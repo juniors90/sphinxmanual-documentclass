@@ -1,0 +1,295 @@
+%% MODULE RELEASE DATA AND OBJECT DESCRIPTIONS
+%
+% change this info string if making any custom modification
+\ProvidesFile{sphinxlatexobjects.sty}[2021/01/27 documentation environments]
+
+% Provides support for this output mark-up from Sphinx latex writer:
+%
+% - environments
+%
+%   - fulllineitems
+%   - productionlist
+%   - optionlist
+%   - DUlineblock (also "lineblock")
+%
+% - macros
+%
+%   - \DUrole
+%   - various legacy support macros related to author and release
+%     data of documented objects and modules.
+
+% \moduleauthor{name}{email}
+\newcommand{\moduleauthor}[2]{}
+
+% \sectionauthor{name}{email}
+\newcommand{\sectionauthor}[2]{}
+
+% Allow the release number to be specified independently of the
+% \date{}.  This allows the date to reflect the document's date and
+% release to specify the release that is documented.
+%
+\newcommand{\py@release}{\releasename\space\version}
+\newcommand{\version}{}% part of \py@release, used by title page and headers
+
+%% MY OPTIONS
+% ------------------------------------------------------- %
+\newcommand{\@shorttitle}{}    % shorttitle
+\newcommand{\@supname}{}       % supervisor
+\newcommand{\@ttitle}{}        % thesistitle
+\newcommand{\@examname}{}      % examname
+\newcommand{\@degreename}{}    % degreename
+\newcommand{\@authornames}{}   % authornames
+\newcommand{\@addressnames}{}  % addressnames
+\newcommand{\@univname}{}      % univname
+\newcommand{\@UNIVNAME}{}      % UNIVNAME
+\newcommand{\@deptname}{}      % deptname
+\newcommand{\@groupname}{}     % groupname
+\newcommand{\@GROUPNAME}{}     % GROUPNAME
+\newcommand{\@facname}{}       % facname
+\newcommand{\@FACNAME}{}       % FACNAME
+\newcommand{\@subjectname}{}   % subjectnam
+\newcommand{\@keywordnames}{}  % keywordnames
+% ------------------------------------------------------- %
+\newcommand{\@booksubtitlename}{}  % booksubtitle
+\newcommand{\@booklicensename}{}   % booklicense
+\newcommand{\@printerfromname}{}  % booksubtitle
+\newcommand{\@publishername}{}      % publisherby
+\newcommand{\@adresspublishername}{}  % publisherby
+\newcommand{\@yearcopyrightname}{}    % publisherby
+\newcommand{\@citypublishername}{}    %\@citypublisher
+\newcommand{\@postalcodename}{}
+\newcommand{\@availableinname}{}
+% ------------------------------------------------------- %
+\newcommand{\@editorname}{}
+\newcommand{\@productioneditorname}{}
+\newcommand{\@copyeditorname}{}
+\newcommand{\@proofreadername}{}
+\newcommand{\@indexername}{}
+\newcommand{\@interiordesignername}{}
+\newcommand{\@coverdesignername}{}
+\newcommand{\@illustratorname}{}
+% ------------------------------------------------------- %
+\newcommand{\@localcontactname}{}
+\newcommand{\@exteriorcontactname}{}
+\newcommand{\@faxcontactname}{}
+\newcommand{\@youtubename}{}
+\newcommand{\@facebookname}{}
+\newcommand{\@instagramname}{}
+\newcommand{\@twittername}{}
+\newcommand{\@telegramchannelname}{}
+\newcommand{\@redditname}{}
+\newcommand{\@discordservername}{}
+\newcommand{\@githubname}{}
+\newcommand{\@linkedinname}{}
+\newcommand{\@gmailname}{}
+% \releaseinfo is used on titlepage (sphinxmanual.cls, sphinxhowto.cls)
+\newcommand{\releaseinfo}{}
+\newcommand{\setreleaseinfo}[1]{\renewcommand{\releaseinfo}{#1}}
+% this is inserted via template and #1=release config variable
+\newcommand{\release}[1]{\renewcommand{\version}{#1}}
+\newcommand{\shorttitle}[1]{\renewcommand{\@shorttitle}{#1}}                               % shorttitle
+\newcommand{\supervisor}[1]{\renewcommand{\@supname}{#1}}                                  % supervisor
+\newcommand{\examiner}[1]{\renewcommand{\@examname}{#1}}                                   % examname
+\newcommand{\degree}[1]{\renewcommand{\@degreename}{#1}}                                   % degreename
+\newcommand{\authors}[1]{\renewcommand{\@authornames}{#1}}                                 % authornames
+\newcommand{\addresses}[1]{\renewcommand{\@addressnames}{#1}}                              % addressnames
+\newcommand{\university}[2]{\renewcommand{\@univname}{\texorpdfstring{\href{#1}{#2}}{#2}}} % univname
+\newcommand{\department}[2]{\renewcommand{\@deptname}{\texorpdfstring{\href{#1}{#2}}{#2}}} % deptname
+\newcommand{\group}[2]{\renewcommand{\@groupname}{\texorpdfstring{\href{#1}{#2}}{#2}}}     % groupname
+\newcommand{\faculty}[2]{\renewcommand{\@facname}{\texorpdfstring{\href{#1}{#2}}{#2}}}     % facname
+\newcommand{\subject}[1]{\renewcommand{\@subjectname}{#1}}                                 % subjectnam
+\newcommand{\keywords}[1]{\renewcommand{\@keywordnames}{#1}}                               % keywordnames
+\newcommand{\booksubtitle}[1]{\renewcommand{\@booksubtitlename}{#1}}                           % subjectnam
+\newcommand{\booklicense}[1]{\renewcommand{\@booklicensename}{#1}}                             % keywordnames
+\newcommand{\printerfrom}[1]{\renewcommand{\@printerfromname}{#1}}                             % printerfrom
+\newcommand{\publisherby}[1]{\renewcommand{\@publishername}{#1}}                             % printerfrom
+\newcommand{\adresspublisher}[1]{\renewcommand{\@adresspublishername}{#1}}                     % adresspublisher
+\newcommand{\yearcopyright}[1]{\renewcommand{\@yearcopyrightname}{#1}}                         %yearcopyriht
+\newcommand{\citypublisher}[1]{\renewcommand{\@citypublishername}{#1}}
+\newcommand{\postalcode}[1]{\renewcommand{\@postalcodename}{#1}}
+\newcommand{\availablein}[1]{\renewcommand{\@availableinname}{\url{#1}}}                        % availablein
+\newcommand{\editor}[1]{\renewcommand{\@editorname}{\textbf{\textsf{Editor:}}~#1}}
+\newcommand{\productioneditor}[1]{\renewcommand{\@productioneditorname}{\textbf{\textsf{Production Editor:}}~#1}}
+\newcommand{\copyeditor}[1]{\renewcommand{\@copyeditorname}{\textbf{\textsf{Copyeditor:}}~#1}}
+\newcommand{\proofreader}[1]{\renewcommand{\@proofreadername}{\textbf{\textsf{Proofreader:}}~#1}}
+\newcommand{\indexer}[1]{\renewcommand{\@indexername}{\textbf{\textsf{Indexer:}}~#1}}
+\newcommand{\interiordesigner}[1]{\renewcommand{\@interiordesignername}{\textbf{\textsf{Interior Designer:}}~#1}}
+\newcommand{\coverdesigner}[1]{\renewcommand{\@coverdesignername}{\textbf{\textsf{Cover Designer:}}~#1}}
+\newcommand{\illustrator}[1]{\renewcommand{\@illustratorname}{\textbf{\textsf{Illustrator:}}~#1}}
+\newcommand{\localcontact}[2]{\renewcommand{\@localcontactname}{#1~(en~#2)}}
+\newcommand{\exteriorcontact}[2]{\renewcommand{\@exteriorcontactname}{#1~(en~#2)}}
+\newcommand{\faxcontact}[1]{\renewcommand{\@faxcontactname}{#1~(fax)}}
+\newcommand{\youtube}[2]{\renewcommand{\@youtubename}{#1:~\url{#2}}}
+\newcommand{\facebook}[2]{\renewcommand{\@facebookname}{#1:~\url{#2}}}
+\newcommand{\instagram}[2]{\renewcommand{\@instagramname}{#1:~\url{#2}}}
+\newcommand{\twitter}[2]{\renewcommand{\@twittername}{#1:~\url{#2}}}
+\newcommand{\telegramchannel}[2]{\renewcommand{\@telegramchannelname}{#1:~\url{#2}}}
+\newcommand{\reddit}[2]{\renewcommand{\@redditname}{#1:~\url{#2}}}
+\newcommand{\discordserver}[2]{\renewcommand{\@discordservername}{#1:~\url{#2}}}
+\newcommand{\github}[2]{\renewcommand{\@githubname}{#1:~\url{#2}}}
+\newcommand{\linkedin}[2]{\renewcommand{\@linkedinname}{#1:~\url{#2}}}
+\newcommand{\gmail}[2]{\renewcommand{\@gmailname}{#1:~\url{#2}}}
+% this is defined by template to 'releasename' latex_elements key
+\newcommand{\releasename}{}
+
+% Fix issue in case release and releasename deliberately left blank
+\newcommand{\sphinxheadercomma}{, }% used in fancyhdr header definition
+\newcommand{\sphinxifemptyorblank}[1]{%
+% test after one expansion of macro #1 if contents is empty or spaces
+     \if&\expandafter\@firstofone\detokenize\expandafter{#1}&%
+     \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}%
+\AtBeginDocument {%
+   \sphinxifemptyorblank{\releasename}
+     {\sphinxifemptyorblank{\version}{\let\sphinxheadercomma\empty}{}}
+     {}%
+}%
+
+% Allow specification of the author's address separately from the
+% author's name.  This can be used to format them differently, which
+% is a good thing.
+%
+\newcommand{\py@authoraddress}{}
+\newcommand{\authoraddress}[1]{\renewcommand{\py@authoraddress}{#1}}
+
+% {fulllineitems} is the main environment for object descriptions.
+%
+% With 4.0.0 \pysigline (and \pysiglinewithargsret), used in a fulllineitems
+% environment the #1 will already be of the width which is computed here, i.e.
+% the available width on line, so the \makebox becomes a bit superfluous
+\newcommand{\py@itemnewline}[1]{% macro used as \makelabel in fulllineitems
+% Memo: this presupposes \itemindent is 0pt
+  \kern\labelsep  % because \@labels core latex box does \hskip-\labelsep
+  \makebox[\dimexpr\linewidth+\labelwidth\relax][l]{#1}%
+  \kern-\labelsep % because at end of \@labels box there is \hskip\labelsep
+}
+
+\newenvironment{fulllineitems}{%
+  \begin{list}{}{\labelwidth \leftmargin
+                 \rightmargin \z@ \topsep -\parskip \partopsep \parskip
+                 \itemsep -\parsep
+                 \let\makelabel=\py@itemnewline}%
+}{\end{list}}
+
+% Signatures, possibly multi-line
+%
+\newlength{\py@argswidth}
+\newcommand{\py@sigparams}[2]{%
+  % The \py@argswidth has been computed in \pysiglinewithargsret to make this
+  % occupy full available width on line.
+  \parbox[t]{\py@argswidth}{\raggedright #1\sphinxcode{)}#2\strut}%
+  % final strut is to help get correct vertical separation in case of multi-line
+  % box with the item contents. 
+}
+\newcommand{\pysigline}[1]{%
+% the \py@argswidth is available we use it despite its name (no "args" here)
+% the \relax\relax is because \py@argswidth is a "skip" variable and the first
+% \relax only ends its "dimen" part
+  \py@argswidth=\dimexpr\linewidth+\labelwidth\relax\relax
+  \item[{\parbox[t]{\py@argswidth}{\raggedright #1\strut}}]
+% contrarily to \pysiglinewithargsret, we do not do this:
+%  \leavevmode\par\nobreak\vskip-\parskip\prevdepth\dp\strutbox
+% which would give exact vertical spacing if item parbox is multi-line,
+% as it affects negatively more common situation of \pysigline
+% used twice or more in a row for labels sharing common description,
+% due to bad interaction with the \phantomsection in the mark-up
+}
+\newcommand{\pysiglinewithargsret}[3]{%
+  \settowidth{\py@argswidth}{#1\sphinxcode{(}}%
+  \py@argswidth=\dimexpr\linewidth+\labelwidth-\py@argswidth\relax\relax
+  \item[{#1\sphinxcode{(}\py@sigparams{#2}{#3}}]
+% this strange incantation is because at its root LaTeX in fact did not
+% imagine a multi-line label, it is always wrapped in a horizontal box at core
+% LaTeX level and we have to find tricks to get correct interline distances.
+  \leavevmode\par\nobreak\vskip-\parskip\prevdepth\dp\strutbox}
+\newcommand{\pysigstartmultiline}{%
+ \def\pysigstartmultiline{\vskip\smallskipamount\parskip\z@skip\itemsep\z@skip}%
+ \edef\pysigstopmultiline
+     {\noexpand\leavevmode\parskip\the\parskip\relax\itemsep\the\itemsep\relax}%
+ \parskip\z@skip\itemsep\z@skip
+}
+
+% Production lists
+%
+\newenvironment{productionlist}{%
+%  \def\sphinxoptional##1{{\Large[}##1{\Large]}}
+  \def\production##1##2{\\\sphinxcode{\sphinxupquote{##1}}&::=&\sphinxcode{\sphinxupquote{##2}}}%
+  \def\productioncont##1{\\& &\sphinxcode{\sphinxupquote{##1}}}%
+  \parindent=2em
+  \indent
+  \setlength{\LTpre}{0pt}%
+  \setlength{\LTpost}{0pt}%
+  \begin{longtable}[l]{lcl}
+}{%
+  \end{longtable}
+}
+
+% Definition lists; requested by AMK for HOWTO documents.  Probably useful
+% elsewhere as well, so keep in in the general style support.
+%
+\newenvironment{definitions}{%
+  \begin{description}%
+  \def\term##1{\item[{##1}]\mbox{}\\*[0mm]}%
+}{%
+  \end{description}%
+}
+
+%% FROM DOCTUTILS LATEX WRITER
+%
+% The following is stuff copied from docutils' latex writer.
+%
+\newcommand{\optionlistlabel}[1]{\normalfont\bfseries #1 \hfill}% \bf deprecated
+\newenvironment{optionlist}[1]
+{\begin{list}{}
+  {\setlength{\labelwidth}{#1}
+   \setlength{\rightmargin}{1cm}
+   \setlength{\leftmargin}{\rightmargin}
+   \addtolength{\leftmargin}{\labelwidth}
+   \addtolength{\leftmargin}{\labelsep}
+   \renewcommand{\makelabel}{\optionlistlabel}}
+}{\end{list}}
+
+\newlength{\lineblockindentation}
+\setlength{\lineblockindentation}{2.5em}
+\newenvironment{lineblock}[1]
+{\begin{list}{}
+  {\setlength{\partopsep}{\parskip}
+   \addtolength{\partopsep}{\baselineskip}
+   \topsep0pt\itemsep0.15\baselineskip\parsep0pt
+   \leftmargin#1\relax}
+ \raggedright}
+{\end{list}}
+
+% From docutils.writers.latex2e
+% inline markup (custom roles)
+% \DUrole{#1}{#2} tries \DUrole#1{#2}
+\providecommand*{\DUrole}[2]{%
+  \ifcsname DUrole\detokenize{#1}\endcsname
+    \csname DUrole\detokenize{#1}\endcsname{#2}%
+  \else% backwards compatibility: try \docutilsrole#1{#2}
+    \ifcsname docutilsrole\detokenize{#1}\endcsname
+      \csname docutilsrole\detokenize{#1}\endcsname{#2}%
+    \else
+      #2%
+    \fi
+  \fi
+}
+
+\providecommand*{\DUprovidelength}[2]{%
+  \ifdefined#1\else\newlength{#1}\setlength{#1}{#2}\fi
+}
+
+\DUprovidelength{\DUlineblockindent}{2.5em}
+\ifdefined\DUlineblock\else
+  \newenvironment{DUlineblock}[1]{%
+    \list{}{\setlength{\partopsep}{\parskip}
+            \addtolength{\partopsep}{\baselineskip}
+            \setlength{\topsep}{0pt}
+            \setlength{\itemsep}{0.15\baselineskip}
+            \setlength{\parsep}{0pt}
+            \setlength{\leftmargin}{#1}}
+    \raggedright
+  }
+  {\endlist}
+\fi
+
+\endinput

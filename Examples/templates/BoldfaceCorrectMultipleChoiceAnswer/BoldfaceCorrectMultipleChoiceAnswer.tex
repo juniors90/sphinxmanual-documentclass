@@ -1,0 +1,24 @@
+\documentclass[10pt]{examdesign} % La clase de documento es examdesign
+\usepackage[spanish]{babel} % Paquete de idiomas con opción en español
+\usepackage[utf8]{inputenc} % Paquete de codificación de caraacteres con opción en utf8
+\usepackage[T1]{fontenc}    % Paquete de codificación de fuentes con opción en T1
+\Fullpages                  % Define la geometría de nuestro documento
+\OneKey                     % Genera respuestas sólo para el primer examen
+\BoldfaceCorrectMultipleChoiceAnswer
+\examname{Trabajo Práctico} % Título de mi clase o similares 
+\class{Nombre de mi clase}  % Define si es un Trabajo Práctico ó Evaluación
+\begin{document}
+%% MULTIPLE CHOICE 
+\begin{multiplechoice}[title={A title}, resetcounter=no]
+	These are meant to be multiple-choice questions --- the type you
+    would give students to fill out using scantrons (or whatever you
+    call the number-2 pencil automatic grading machines).
+	\begin{question}        
+		How many people live in Wales?
+    	\choice[!]{Approximately 2,811,865.}
+    	\choice{More than in most countries.}
+		\choice{None.}
+    	\choice{Exactly seventeen.}
+    \end{question}    
+\end{multiplechoice}
+\end{document}

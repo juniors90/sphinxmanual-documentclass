@@ -1,0 +1,10 @@
+%===============================myindex.ist=====================
+
+headings_flag 1
+
+headings_flag 1
+heading_prefix "{\\textbf{"heading_suffix "}}\\par\\nopagebreak\n"
+
+
+
+
